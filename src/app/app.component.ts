@@ -1,14 +1,12 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
-import {Button} from 'primeng/button';
+import {Tab, TabList, Tabs} from 'primeng/tabs';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, RouterLink, Button],
+  imports: [RouterOutlet, RouterLink, TabList, Tab, Tabs],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-learn-rxjs';
 }
