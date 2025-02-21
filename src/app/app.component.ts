@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
 import {Tab, TabList, Tabs} from 'primeng/tabs';
+import {appRoutes} from './app.routes';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,5 @@ import {Tab, TabList, Tabs} from 'primeng/tabs';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  protected readonly appRoutes = appRoutes;
 }

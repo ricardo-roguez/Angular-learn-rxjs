@@ -4,7 +4,8 @@
     <h2>Lista de Operadores más comunes</h2>
     <p-tabs>
       <p-tablist>
-        <p-tab value="/map" routerLink="/map"><span>Map</span></p-tab>
+        <p-tab [value]=appRoutes.map [routerLink]=appRoutes.map><span>Map</span></p-tab>
+        <p-tab [value]=appRoutes.filter [routerLink]=appRoutes.filter><span>Filter</span></p-tab>
       </p-tablist>
     </p-tabs>
   </div>
