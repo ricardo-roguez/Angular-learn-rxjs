@@ -4,7 +4,7 @@ import {MapComponent} from './map.component';
 import {MockProvider} from 'ng-mocks';
 import {InvoiceService} from '../../../services/invoice.service';
 import {of} from 'rxjs';
-import {Highlight} from 'ngx-highlightjs';
+import {Highlight, provideHighlightOptions} from 'ngx-highlightjs';
 
 const invoices = [
   {
@@ -54,8 +54,13 @@ describe('MapComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [MapComponent, Highlight],
-      providers: [MockProvider(InvoiceService)]
-    }).overrideTemplate(MapComponent, '').compileComponents();
+      providers: [
+        MockProvider(InvoiceService),
+        provideHighlightOptions({
+          fullLibraryLoader: () => import('highlight.js')
+        })
+      ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MapComponent);
     component = fixture.componentInstance;
