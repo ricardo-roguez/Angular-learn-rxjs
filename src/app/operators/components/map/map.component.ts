@@ -2,6 +2,7 @@ import {Component, inject, OnInit} from '@angular/core';
 import {Highlight} from 'ngx-highlightjs';
 import {InvoiceService} from '../../../services/invoice.service';
 import {Invoice} from '../../../models/invoice';
+import {map} from 'rxjs';
 
 @Component({
   selector: 'app-map',
@@ -28,7 +29,6 @@ export class MapComponent implements OnInit {
   ngOnInit() {
 
     // Todo: refactorizar este código usando el operador Map:
-
     this.invoiceService.getInvoices().subscribe({
       next: (invoices: Invoice[]) => {
         this.invoices = invoices.map(invoice => ({

@@ -2,8 +2,10 @@
   tid: string;
   reference: string;
   currency: string;
-  invoiceType: string;
+  invoiceType: InvoiceType;
   amount: number;
   tax: number;
   totalAmount?: number;
 }
+
+type InvoiceType = 'Credit' | 'Debit';

@@ -5,8 +5,9 @@ import {MockProvider} from 'ng-mocks';
 import {InvoiceService} from '../../../services/invoice.service';
 import {of} from 'rxjs';
 import {Highlight, provideHighlightOptions} from 'ngx-highlightjs';
+import {Invoice} from '../../../models/invoice';
 
-const invoices = [
+const invoices: Invoice[] = [
   {
     "tid": "550e8400-e29b-41d4-a716-446655440000",
     "reference": "INV-001",
@@ -25,7 +26,7 @@ const invoices = [
   }
 ];
 
-const expectedInvoices = [
+const expectedInvoices: Invoice[] = [
   {
     tid: '550e8400-e29b-41d4-a716-446655440000',
     reference: 'INV-001',
