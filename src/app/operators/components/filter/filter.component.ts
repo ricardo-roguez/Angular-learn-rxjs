@@ -19,10 +19,10 @@ export class FilterComponent implements OnInit {
 
     const numbers$ = of(1, 2, 3, 4, 5);
     numbers$
-      .pipe(filter(num => num % 2 === 0))
-      .subscribe({
-        next: data => console.log(data), // Output: 2, 4
-      });
+        .pipe(filter(num => num % 2 === 0))
+        .subscribe({
+          next: data => console.log(data), // Output: 2, 4
+        });
     `;
 
   ngOnInit(): void {
