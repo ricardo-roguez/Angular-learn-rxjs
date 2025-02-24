@@ -2,7 +2,6 @@ import {Component, inject, OnInit} from '@angular/core';
 import {Highlight} from 'ngx-highlightjs';
 import {InvoiceService} from '../../../services/invoice.service';
 import {Invoice} from '../../../models/invoice';
-import {filter, map} from 'rxjs';
 
 @Component({
   selector: 'app-filter',

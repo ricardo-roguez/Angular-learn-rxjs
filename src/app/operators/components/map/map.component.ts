@@ -2,7 +2,6 @@ import {Component, inject, OnInit} from '@angular/core';
 import {Highlight} from 'ngx-highlightjs';
 import {InvoiceService} from '../../../services/invoice.service';
 import {Invoice} from '../../../models/invoice';
-import {map} from 'rxjs';
 
 @Component({
   selector: 'app-map',
@@ -26,8 +25,8 @@ export class MapComponent implements OnInit {
         });
     `;
 
-  ngOnInit() {
-
+  ngOnInit(): void {
+    // Debemos calcular el total amount de cada factura sumando el amount y tax
     // Todo: refactorizar este código usando el operador Map:
     this.invoiceService.getInvoices().subscribe({
       next: (invoices: Invoice[]) => {
